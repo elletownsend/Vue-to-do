@@ -23,11 +23,10 @@
     </nav>
 
     <div id="app">
-        <container> <input type="text" class="input" placeholder="What do you want to do today?..." v-on:keyup.enter="addTodo">
-
-            <span>&nbsp</span>
+        <section>
+            <input type="text" class="input" placeholder="What do you want to do today?..." v-on:keyup.enter="addTodo">
             <ul>
-                <li v-for="todo in todos" class="flex">
+                <li v-for="todo in todos" :key="todo.id" class="flex">
                     <span class='text'>{{todo.text}}</span>
                     <div class="space"></div>
                     <button class="remove" @click="removeTodo(todo.id)"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,9 +34,10 @@
                         </svg></button>
                 </li>
             </ul>
-        </container>
+        </section>
     </div>
     <script src="index.js"></script>
+    <script src="darkMode.js"></script>
 </body>
 
 </html>

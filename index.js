@@ -20,17 +20,3 @@ new Vue({
         }
     }
 });
-
-
-function darkModeToggle() {
-    var mode = document.getElementById("mode").innerHTML;
-    console.log(mode);
-
-    if (mode == '🌑') {
-        document.documentElement.setAttribute("data-theme", "dark");
-        document.getElementById("mode").innerHTML = '🌕';
-    } else {
-        document.documentElement.setAttribute("data-theme", "light");
-        document.getElementById("mode").innerHTML = '🌑';
-    }
-}
